@@ -49,7 +49,10 @@ function deleteCheck(event) {
   const item = event.target;
   if (item.classList[0] === "trash-btn") {
     const deleteItem = item.parentElement;
-    deleteItem.remove();
+    deleteItem.classList.add("fall");
+    deleteItem.addEventListener("transitionend", function () {
+      deleteItem.remove();
+    });
   }
   if (item.classList[0] === "complete-btn") {
     const completedItem = item.parentElement;
