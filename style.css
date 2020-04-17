@@ -21,6 +21,7 @@ header,
 form {
   min-height: 20vh;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -41,6 +42,7 @@ form button:hover {
   color: #fff;
 }
 
+/*Todo list Elements Style*/
 .todo-container {
   display: flex;
   justify-content: center;
@@ -82,6 +84,7 @@ form button:hover {
 .fa-check {
   pointer-events: none;
 }
+
 /*completed toggle effect*/
 .completed {
   opacity: 0.5;
@@ -90,4 +93,35 @@ form button:hover {
 .fall {
   transform: translateY(8rem) rotateZ(20deg);
   opacity: 0;
+}
+
+/*Tasks Filter Style*/
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  color: rgb(253, 187, 45);
+  width: 10rem;
+  cursor: pointer;
+  padding: 1.16rem;
+}
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background-color: rgb(253, 187, 45);
+  top: 0;
+  right: 0;
+  padding: 1.16rem;
+  pointer-events: none;
+}
+.select:hover::after {
+  background-color: #fff;
+  color: rgb(253, 187, 45);
 }
